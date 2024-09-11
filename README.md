@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Getting Started
 
-## Getting Started
+To get started with the project, follow these steps:
 
-First, run the development server:
+1. Clone the repository to your local machine.
+2. Navigate to the project directory: `cd nextjs-form`.
+3. Install the dependencies by running the following command: `npm install`.
+4. Start the development server: `npm run dev`.
+5> To run unit tests : `npm test`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ENV
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can find the site key used for google recaptcha in the .env file
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Key Files and Directories
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- src/app/form/page.js: Contains the form component with reCAPTCHA v3 integration.
+- next.config.mjs: Next.js configuration file.
+- tailwind.config.js: Tailwind CSS configuration file.
+- postcss.config.js: PostCSS configuration file.
+- .eslintrc.json: ESLint configuration file.
+- package.json: Contains project metadata and dependencies.
 
-## Learn More
+### reCAPTCHA v3
 
-To learn more about Next.js, take a look at the following resources:
+To use reCAPTCHA v3, you need to provide your reCAPTCHA site key. Update the reCaptchaKey in the GoogleReCaptchaProvider component in src/app/form/page.js:
+<GoogleReCaptchaProvider reCaptchaKey="your-recaptcha-key">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Tailwind CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Tailwind CSS is configured in tailwind.config.js. You can customize the Tailwind configuration as needed.
 
-## Deploy on Vercel
+### Dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project uses the following main dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. next: React framework for server-side rendering.
+2. react: JavaScript library for building user interfaces.
+3. react-dom: Entry point to the DOM and server renderers for React.
+4. react-hook-form: Library for managing form state.
+5. axios: Promise-based HTTP client for the browser and Node.js.
+6. react-google-recaptcha-v3: React component for Google reCAPTCHA v3.
+7. tailwindcss: Utility-first CSS framework.
